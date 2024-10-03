@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PageMaster.master.cs" Inherits="TpWeb_Grupo2A.PageMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="TpWeb_Grupo2A.PageMaster" %>
 
 <!DOCTYPE html>
 
