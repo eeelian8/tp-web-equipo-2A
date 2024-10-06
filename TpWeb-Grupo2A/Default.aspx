@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
     <div class="row">
         <div class="col-3"></div>
         <div class="col">
@@ -13,7 +14,7 @@
                     <label for="floatingInputGroup1">Codigo</label>
                 </div>
             </div>
-            <asp:Button type="submit" class="btn btn-primary" ID="btn_codigo" runat="server" Text="Validar" />
+            <asp:Button type="submit" OnClick="btn_codigo_Click" Class="btn btn-primary" ID="btn_codigo" runat="server" Text="Validar" />
         </div>
         <div class="col-3"></div>
     </div>

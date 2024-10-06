@@ -19,6 +19,12 @@ namespace TpWeb_Grupo2A
         protected void input_codigo_TextChanged(object sender, EventArgs e)
         {
             
-        } 
+        }
+
+        protected void btn_codigo_Click(object sender, EventArgs e)
+        {
+            string text = input_codigo.Text;
+            Response.Redirect("Premios.aspx", false);   
+        }
     }
 }
