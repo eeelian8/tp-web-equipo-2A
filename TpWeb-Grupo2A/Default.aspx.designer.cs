@@ -15,13 +15,22 @@ namespace TpWeb_Grupo2A
     {
 
         /// <summary>
-        /// Control input_codigo.
+        /// Control alertMessage.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox input_codigo;
+        protected global::System.Web.UI.WebControls.Literal alertMessage;
+
+        /// <summary>
+        /// Control input_codigoVoucher.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox input_codigoVoucher;
 
         /// <summary>
         /// Control btn_codigo.

@@ -3,6 +3,7 @@ using Dominio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,54 +13,31 @@ namespace Servicios
     {
         public List<Voucher> Listar()
         {
-            List<Voucher> lista = new List<Voucher>();
+            List<Voucher> listaVoucher = new List<Voucher>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("select V.CodigoVoucher, V.IdCliente, V.FechaCanje, V.IdArticulo from Vouchers V");
+                datos.setearConsulta("select CodigoVoucher, IdCliente, FechaCanje, IdArticulo from Vouchers ");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Voucher aux = new Voucher();
-                    aux.CodigoVoucher = (string)datos.Lector["CodigoVoucher"];
-                    aux.IdCliente = (int)datos.Lector["IdCliente"];
-                    aux.FechaCanje = (DateTime)datos.Lector["FechaCanje"];
-                    aux.IdArticulo = (int)datos.Lector["IdArticulo"];
 
-                    lista.Add(aux);
+                    aux.CodigoVoucher = datos.Lector.IsDBNull(0) ? "0" : (string)datos.Lector["CodigoVoucher"];
+                    aux.IdCliente = datos.Lector.IsDBNull(1) ? 0 : (int)datos.Lector["IdCliente"];
+                    aux.FechaCanje = datos.Lector.IsDBNull(2) ? new DateTime() : (DateTime)datos.Lector["FechaCanje"];
+                    aux.IdArticulo = datos.Lector.IsDBNull(3) ? 0 : (int)datos.Lector["IdArticulo"];
+
+                    listaVoucher.Add(aux);
                 }
 
-                return lista;
+                return listaVoucher;
             }
             catch (Exception ex)
             {
-
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-        }
-
-        public void Agregar(Voucher vou)
-        {
-            AccesoDatos datos = new AccesoDatos();
-
-            try
-            {
-                datos.setearConsulta("insert into Vouchers(CodigoVoucher, IdCliente, IdArticulo, FechaCanje) Values(@CodigoVoucher, @IdCliente, @IdArticulo, @FechaCanje)");
-                datos.setearParametro("@CodigoVoucher", vou.CodigoVoucher);
-                datos.setearParametro("@IdCliente", vou.IdCliente);
-                datos.setearParametro("@IdArticulo", vou.IdArticulo);
-                datos.setearParametro("@FechaCanje", vou.FechaCanje);
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-
+                Console.WriteLine(ex.Message);
                 throw ex;
             }
             finally
