@@ -4,45 +4,51 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
-    <div class="row">
-        <div class="col-3"></div>
-        <div class="col">
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <span class="input-group-text" id="basic-addon2">@example.com</span>
-            </div>
-
-            <div class="mb-3">
-                <label for="basic-url" class="form-label">Your vanity URL</label>
-                <div class="input-group">
-                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                </div>
-                <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
-            </div>
-
-            <div class="input-group mb-3">
-                <span class="input-group-text">$</span>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                <span class="input-group-text">.00</span>
-            </div>
-
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-                <span class="input-group-text">@</span>
-                <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-            </div>
-
-            <div class="input-group">
-                <span class="input-group-text">With textarea</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
+    <div>
+        <asp:Label Class="h1" ID="Label1" runat="server" Text="TERCER PASO: "></asp:Label>
+        <asp:Label Class="h6" ID="Label2" runat="server" Text="Complete el formulario.."></asp:Label>
+    </div>
+    <br />
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+            <label for="inputAddress" class="form-label">Numero de documento</label>
+            <input type="number" class="form-control" id="inputAddress" placeholder="XXXXXXXX">
+        </div>
+        <div class="col-12">
+            <label for="inputAddress2" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputAddress2" placeholder="ejemplo@mail.com">
+        </div>
+        <div class="col-md-6">
+            <label for="inputCity" class="form-label">Ciudad</label>
+            <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+            <label for="inputState" class="form-label">Localidad</label>
+            <select id="inputState" class="form-select">
+                <option selected>Seleccionar...</option>
+                <option>...</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Codigo Postal</label>
+            <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Acepto los terminos y condiciones
+                </label>
             </div>
         </div>
-        <div class="col-3"></div>
+        <button type="button" class="btn btn-success">Participar</button>
     </div>
 </asp:Content>

@@ -5,6 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
     <asp:Literal ID="alertMessage" runat="server" />
+    <div>
+        <asp:Label Class="h1" ID="Label1" runat="server" Text="PRIMER PASO: "></asp:Label>
+        <asp:Label Class="h6" ID="Label2" runat="server" Text="Ingrese el codigo de su voucher.."></asp:Label>
+    </div>
+    <br />
     <div class="row">
         <div class="col-3"></div>
         <div class="col">
@@ -15,7 +20,7 @@
                     <label for="floatingInputGroup1">Codigo</label>
                 </div>
             </div>
-             <asp:Button type="submit" OnClick="btn_codigo_Click" Class="btn btn-primary" ID="btn_codigo" runat="server" Text="Validar" />
+            <asp:Button type="submit" OnClick="btn_codigo_Click" Class="btn btn-primary" ID="btn_codigo" runat="server" Text="Validar" />
         </div>
         <div class="col-3"></div>
     </div>
