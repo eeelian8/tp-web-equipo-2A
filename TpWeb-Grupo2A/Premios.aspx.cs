@@ -20,19 +20,5 @@ namespace TpWeb_Grupo2A
             ListaArticulos = articuloCBD.Listar();
         }
 
-        protected void btn_2doPremio_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Formulario.aspx", false);
-        }
-
-        protected void btn_1erPremio_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Formulario.aspx", false);
-        }
-
-        protected void btn_3erPremio_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Formulario.aspx", false);
-        }
     }
 }

@@ -3,43 +3,45 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
+    <div>
+        <br />
+    </div>
     <div>
         <asp:Label Class="h1" ID="Label1" runat="server" Text="TERCER PASO: "></asp:Label>
         <asp:Label Class="h6" ID="Label2" runat="server" Text="Complete el formulario.."></asp:Label>
     </div>
-    <br />
     <div class="row g-3">
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="inputEmail4">
+            <asp:TextBox runat="server" type="text" class="form-control" ID="input_nombre"></asp:TextBox>
         </div>
         <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="inputPassword4">
+            <asp:TextBox runat="server" type="text" class="form-control" ID="input_apellido"></asp:TextBox>
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Documento</label>
+            <asp:TextBox runat="server" class="form-control" type="text" cssClass="form-control" ID="input_documento"></asp:TextBox>
         </div>
         <div class="col-12">
-            <label for="inputAddress" class="form-label">Numero de documento</label>
-            <input type="number" class="form-control" id="inputAddress" placeholder="XXXXXXXX">
+            <label for="inputAddress" class="form-label">Email</label>
+            <asp:TextBox type="text" class="form-control" ID="input_email" runat="server"></asp:TextBox>
         </div>
         <div class="col-12">
-            <label for="inputAddress2" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputAddress2" placeholder="ejemplo@mail.com">
+            <label for="inputAddress2" class="form-label">Direccion</label>
+            <asp:TextBox ID="input_direccion" runat="server" class="form-control"></asp:TextBox>
         </div>
         <div class="col-md-6">
             <label for="inputCity" class="form-label">Ciudad</label>
-            <input type="text" class="form-control" id="inputCity">
+            <asp:TextBox type="text" class="form-control" ID="input_ciudad" runat="server"></asp:TextBox>
         </div>
         <div class="col-md-4">
             <label for="inputState" class="form-label">Localidad</label>
-            <select id="inputState" class="form-select">
-                <option selected>Seleccionar...</option>
-                <option>...</option>
-            </select>
+            <asp:TextBox ID="input_Localidad" class="form-control" runat="server"></asp:TextBox>
         </div>
         <div class="col-md-2">
             <label for="inputZip" class="form-label">Codigo Postal</label>
-            <input type="text" class="form-control" id="inputZip">
+            <asp:TextBox runat="server" type="text" class="form-control" ID="input_codigoPostal"></asp:TextBox>
         </div>
         <div class="col-12">
             <div class="form-check">
@@ -49,6 +51,8 @@
                 </label>
             </div>
         </div>
-        <button type="button" class="btn btn-success">Participar</button>
+        <div class="col-12">
+            <asp:Button ID="btnParticipar" CssClass="btn btn-primary" runat="server" Text="Participar" OnClick="btnParticipar_Click" />
+        </div>
     </div>
 </asp:Content>

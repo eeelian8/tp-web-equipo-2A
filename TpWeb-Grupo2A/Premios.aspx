@@ -47,7 +47,7 @@
                     <small class="text-body-secondary"><%:"$" + articulo.Precio.ToString("N0", System.Globalization.CultureInfo.CurrentCulture)%></small>
                 </div>
                 <div class="card-footer">
-                    <a href="Formulario.aspx?art=<%: articulo.Id %>" class="btn btn-primary">Seleccionar</a>
+                    <a href="Formulario.aspx?cv=<%:Request.QueryString["codigoVoucher"]%>&art=<%: articulo.Id %>" class="btn btn-primary">Seleccionar</a>
                 </div>
             </div>
         </div>

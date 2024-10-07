@@ -12,7 +12,8 @@ namespace TpWeb_Grupo2A
 {
     public partial class Inicio : System.Web.UI.Page
     {
-        public string codVaucher { get; set; }
+        public string codVoucher { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -41,10 +42,10 @@ namespace TpWeb_Grupo2A
             try
             {
                 aux = voucherList.Find(x => x.CodigoVoucher == text);
-                if (aux != null)
+                if (aux != null && aux.IdCliente == 0)
                 {
-                    codVaucher = text;
-                    Response.Redirect("Premios.aspx", false);
+                    codVoucher = text;
+                    Response.Redirect($"Premios.aspx?codigoVoucher={codVoucher}", false);
                 } else
                 {
                     alertMessage.Text = "<div class=\"alert alert-danger\" role=\"alert\">\r\n  El codigo ingresado es invalido o ya fue utilizado!! \r\n</div>";

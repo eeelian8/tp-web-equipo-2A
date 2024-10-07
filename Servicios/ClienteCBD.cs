@@ -23,14 +23,14 @@ namespace Servicios
                 while (datos.Lector.Read())
                 {
                     Cliente aux = new Cliente();
-                    aux.id = (int)datos.Lector["Id"];
-                    aux.Documento = (string)datos.Lector["Documento"];
-                    aux.Nombre = (string)datos.Lector["Nombre"];
-                    aux.Apellido = (string)datos.Lector["Apellido"];
-                    aux.Email = (string)datos.Lector["Email"];
-                    aux.Direccion = (string)datos.Lector["Direccion"];
-                    aux.Ciudad = (string)datos.Lector["Ciudad"];
-                    aux.Cp = (string)datos.Lector["Cp"];
+                    aux.id = datos.Lector.IsDBNull(0) ? 0 : (int)datos.Lector["Id"];
+                    aux.Documento = datos.Lector.IsDBNull(1) ? string.Empty : (string)datos.Lector["Documento"]; 
+                    aux.Nombre = datos.Lector.IsDBNull(2) ? string.Empty : (string)datos.Lector["Nombre"]; 
+                    aux.Apellido = datos.Lector.IsDBNull(3) ? string.Empty : (string)datos.Lector["Apellido"]; 
+                    aux.Email = datos.Lector.IsDBNull(4) ? string.Empty : (string)datos.Lector["Email"]; 
+                    aux.Direccion = datos.Lector.IsDBNull(5) ? string.Empty : (string)datos.Lector["Direccion"]; 
+                    aux.Ciudad = datos.Lector.IsDBNull(6) ? string.Empty : (string)datos.Lector["Ciudad"]; 
+                    aux.Cp = datos.Lector.IsDBNull(7) ? string.Empty : (string)datos.Lector["CP"]; 
 
                     lista.Add(aux);
                 }
