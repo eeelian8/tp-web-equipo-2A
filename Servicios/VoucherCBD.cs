@@ -51,7 +51,7 @@ namespace Servicios
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("update Vouchers set CodigoVoucher = @CodigoVoucher, @IdCliente = @IdCliente, IdArticulo = @IdArticulo, FechaCanje = @FechaCanje where CodigoVoucher = @CodigoVoucher");
+                datos.setearConsulta("update Vouchers set CodigoVoucher = @CodigoVoucher, IdCliente = @IdCliente, FechaCanje = @FechaCanje, IdArticulo = @IdArticulo where CodigoVoucher = @CodigoVoucher");
                 datos.setearParametro("@CodigoVoucher", vou.CodigoVoucher);
                 datos.setearParametro("@IdCliente", vou.IdCliente);
                 datos.setearParametro("@IdArticulo", vou.IdArticulo);

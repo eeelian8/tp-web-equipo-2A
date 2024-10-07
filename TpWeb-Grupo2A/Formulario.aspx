@@ -12,7 +12,7 @@
     </div>
     <div class="row g-3">
         <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Nombre</label>
+            <label for="input_nombre" class="form-label">Nombre</label>
             <asp:TextBox runat="server" type="text" class="form-control" ID="input_nombre"></asp:TextBox>
         </div>
         <div class="col-md-6">

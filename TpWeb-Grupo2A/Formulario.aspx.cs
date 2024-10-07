@@ -48,8 +48,7 @@ namespace TpWeb_Grupo2A
                 auxCBD.Modificar(aux);
                 Response.Redirect("Final.aspx", false);
                 return;
-            }
-            else
+            } else if (auxCliente == null)
             {
                 auxCliente.Nombre = input_nombre.Text;
                 auxCliente.Apellido = input_apellido.Text;
