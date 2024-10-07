@@ -30,17 +30,17 @@ namespace Servicios
                     aux.Email = datos.Lector.IsDBNull(4) ? string.Empty : (string)datos.Lector["Email"]; 
                     aux.Direccion = datos.Lector.IsDBNull(5) ? string.Empty : (string)datos.Lector["Direccion"]; 
                     aux.Ciudad = datos.Lector.IsDBNull(6) ? string.Empty : (string)datos.Lector["Ciudad"]; 
-                    aux.Cp = datos.Lector.IsDBNull(7) ? string.Empty : (string)datos.Lector["CP"]; 
+                    aux.Cp = datos.Lector.IsDBNull(7) ? 0 : (int)datos.Lector["CP"]; 
 
                     lista.Add(aux);
                 }
 
                 return lista;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                throw ex;
+                throw;
             }
             finally
             {

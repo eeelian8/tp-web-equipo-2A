@@ -57,7 +57,7 @@ namespace TpWeb_Grupo2A
                 auxCliente.Direccion = input_direccion.Text;
                 auxCliente.Documento = input_documento.Text;
                 auxCliente.Ciudad = input_ciudad.Text;
-                auxCliente.Cp = input_codigoPostal.Text;
+                auxCliente.Cp = int.Parse(input_codigoPostal.Text);
                 auxClienteCBD.Agregar(auxCliente);
             }
 
